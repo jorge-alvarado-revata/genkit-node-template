@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "genkit-cli": "^0.9.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@genkit-ai/googleai": "^0.9.6",
+    "dotenv": "^16.4.7",
+    "genkit": "^0.9.6"
+  },
+  "name": "genkit-node-template",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "another genkit node template example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
