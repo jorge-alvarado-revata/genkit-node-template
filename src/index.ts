@@ -1,12 +1,13 @@
 import { genkit, z } from 'genkit';
-import { googleAI, gemini15Flash } from '@genkit-ai/googleai';
+import { googleAI, gemini20Flash } from '@genkit-ai/googleai';
 import { QueryIn, ResponseOut } from './model/schema.js';
+import { startFlowServer  } from '@genkit-ai/express';
 
 import dotenv from "dotenv";
 
 const ai = genkit({
   plugins: [googleAI()],
-  model: gemini15Flash,
+  model: gemini20Flash,
 });
 
 dotenv.config()
@@ -27,7 +28,7 @@ const programmingFlow = ai.defineFlow(
         const parsedInput = QueryIn.parse(data);
 
         const { text } = await ai.generate({
-            model:gemini15Flash,
+            model:gemini20Flash,
             system: 'You are an expert on history of computer science and programming languages.',
             prompt:`Response a shortly history of a programming language with name ${parsedInput.name}, include in the description, year of creation, principal keywords, paradigms, pros and cons. 
             Response with schema from output.`,
@@ -71,6 +72,6 @@ const programmingFlow = ai.defineFlow(
   }
 );
 
-ai.startFlowServer({
+startFlowServer({
   flows: [programmingFlow],
 });

@@ -1,13 +1,18 @@
 {
   "devDependencies": {
-    "genkit-cli": "^0.9.6",
-    "tsx": "^4.19.2",
+    "@types/express": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "genkit-cli": "^1.4.0",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@genkit-ai/googleai": "^0.9.6",
+    "@genkit-ai/express": "^1.4.0",
+    "@genkit-ai/googleai": "^1.4.0",
     "dotenv": "^16.4.7",
-    "genkit": "^0.9.6"
+    "genkit": "^1.4.0"
   },
   "name": "genkit-node-template",
   "type": "module",
